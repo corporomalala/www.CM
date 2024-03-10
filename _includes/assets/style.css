@@ -10,12 +10,13 @@ a:focus { text-decoration: underline; }
 /*** END Z-INDEXES ***/
 
 /*** COLORS ***/
-.nav-menu-link.is-intobinary { background-color: green; }
-.nav-menu-link.is-babylon19 { background-color: purple; }
+.nav-menu-link.is-intobinary { background-color: #03EA60; }
+.nav-menu-link.is-babylon19 { background-color: #AA169D; } /* alternate purple: #340853  */
+.nav-menu-link.is-whatsapp { background-color: #AAA; }
+	.nav-menu-link { background-color: #AAA !important; }
 
 .banner,
 .footer { background-color: white; }
-.nav-menu-link,
 .nav-menu-text,
 .m-gallery-link,
 .m-gallery-quote,
