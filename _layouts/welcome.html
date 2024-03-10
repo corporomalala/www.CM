@@ -1,0 +1,73 @@
+---
+layout: default
+---
+		<input id="chkbx4menu" type="checkbox" name="chkbx4menu" />
+
+		<main>
+			<nav class="nav"><div class="nav-wrap d-midWrap">
+				<h2 class="nav-title u-title"><a href="https://corporomalala.com">Corporo <br />Malala</a></h2>
+
+				<div class="nav-aside d-cssCentered">
+					<a href="mailto:hello@corporomalala.com">hello@corporomalala.com</a>
+				</div>
+				
+				<div class="nav-menu">
+					<label for="chkbx4menu" class="nav-menu-button u-btn d-highlightAnimation">/</label>
+					
+					<div class="nav-menu-wrap">
+						<p class="nav-menu-text">And beyond the partnerships is a long-term vision for Women and for Africa. Check out the social ventures!</p>
+					
+						<ul class="nav-menu-list">
+							<li class="nav-menu-list-item"><a href="https://intobinary.org" class="nav-menu-link is-intobinary" title="TECHNOLOGY">Into Binary</a></li>
+							<li class="nav-menu-list-item"><a href="https://babylon19.org" class="nav-menu-link is-babylon19" title="ACTIVISM">Babylon19</a></li>
+						</ul>
+					</div>
+				</div>
+			</div></nav>
+
+			<section class="banner"><div class="banner-wrap d-midWrap">
+				<h2 class="banner-tag">You've got a business, <br />we have got brilliant minds.</h2>
+				<div class="banner-aside">
+					<p class="banner-text">Business owners are always seeking for strategies to ensure steady performance and efficient management of their business assets. Over time, various approaches have been developed for this purpose. One particularly effective method involves forming strategic partnerships and structuring it all to be managed by a single holding company.</p>
+
+					<div class="banner-footer">
+						<p class="u-title">You + We = <br /><br />Corporo <br />Malala</p>
+					</div>
+				</div>
+			</div></section>
+
+			<section class="companies m-gallery"><ul class="companies-list m-gallery-list">{% for file in site.data.companies %}{% for data in file %}{% if data[0] != "QUOTE" %}
+				<li class="companies-list-item m-gallery-list-item">
+					<a href="{{ data[1] }}" class="companies-link m-gallery-link" title="Visit Website">{{ data[0] }}</a>
+					<img src="/assets/images/companies-{{ data[0] | downcase | replace: ' ', '' }}.png" class="companies-placeholder m-gallery-placeholder" />
+				</li>{% else %}
+				<li class="companies-list-item m-gallery-list-item is-quote"><blockquote class="m-gallery-quote d-cssCentered">
+					<q class="m-gallery-quote-q">{{ data[1][0] }}</q>
+					<cite class="m-gallery-quote-cite">{{ data[1][1] }}<cite>
+				</blockquote></li>
+				{% endif %}{% endfor %}{% endfor %}
+			</ul></section>
+
+		<section class="area">
+			<section class="message d-midWrap"><div class="message-wrap d-cssCentered">
+				<h3 class="message-tag">And it's not just money. <br />We give back!</h3>
+			</div></section>
+
+			<section class="gigs m-gallery"><ul class="gigs-list m-gallery-list">{% for file in site.data.gigs %}{% for data in file %}{% if data[0] != "QUOTE" %}
+				<li class="gigs-list-item m-gallery-list-item">
+					<a href="{{ data[1] }}" class="gigs-link m-gallery-link" title="Visit Instagram">{{ data[0] }}</a>
+					<img src="/assets/images/gigs-{{ data[0] | downcase | replace: ' ', '' }}.png" class="gigs-placeholder m-gallery-placeholder" />
+				</li>{% else %}
+				<li class="gigs-list-item m-gallery-list-item is-quote"><blockquote class="m-gallery-quote d-cssCentered">
+					<q class="m-gallery-quote-q">{{ data[1][0] }}</q>
+					<cite class="m-gallery-quote-cite">{{ data[1][1] }}<cite>
+				</blockquote></li>{% endif %}{% endfor %}{% endfor %}
+			</ul></section>
+		</section>
+
+			<footer class="footer"><div class="footer-wrap d-midWrap">
+				&copy; Copyrights 2024: <a href="https://corporomalala.com" class="u-title">Corporo Malala</a>. All rights reserved.
+			</div></footer>
+		</main>
+
+		<script src="assets/scripts/www-dot-corporomalala-dot-com.js"></script>
