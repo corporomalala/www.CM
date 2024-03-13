@@ -115,10 +115,12 @@ body, html { background-color: #eee !important; }
 	.m-gallery-link:before { left: 0; }
 	.m-gallery-link:after { right: 0; }
 	
-	.m-gallery-quote { width: 100%; height: 100%; }
+	.m-gallery-quote { width: 100%; height: 100%; overflow-y: scroll; }
 	.m-gallery-quote-q {
-		width: 50%; max-width: 100vw;
+		max-width: 100vw;
 		padding: 1em;
+		
+//		display: none;
 	}
 /*** END MIXINS ***/
 
@@ -252,6 +254,8 @@ body, html { background-color: #eee !important; }
 	.m-gallery-link:after {
 		width: 3em; height: 3em;
 	}	
+	
+	.m-gallery-quote-q { width: 50%; }
 }
 /*** MEDIA QUERIES ***/
 
