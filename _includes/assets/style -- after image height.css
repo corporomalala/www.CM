@@ -114,16 +114,18 @@ body, html { background-color: #eee !important; }
 	}
 	.m-gallery-link:before { left: 0; }
 	.m-gallery-link:after { right: 0; }
+	.m-gallery-placeholder {
+		width: auto; height: 100%;
+	}
 	
-	.m-gallery-quote { width: 100%; height: 100%; }
-	.m-gallery-quote-cite {
-		padding-top: 1em;
+	.m-gallery-quote {
+		height: 100%;
+		overflow-y: scroll;
 	}
 	.m-gallery-quote-q {
-		max-width: 100vw;
-		overflow-y: auto;
-		
-//		border: 1px solid purple;
+		width: 100%;
+		padding: 1em;
+		padding-left: 2em;
 	}
 /*** END MIXINS ***/
 
@@ -176,11 +178,20 @@ body, html { background-color: #eee !important; }
 /*** END INTERRACTIVITY ***/
 
 /*** MEDIA QUERIES ***/
+@media screen and (max-width: 30em) {
+	.m-gallery-list-item.is-quote {
+//		min-width: 125vw;
+	}
+	.m-gallery-quote-q {// width: 50%; }
+}
+
 @media screen and (max-width: 50em) {
 	body { font-size: 14px; }
 
 	.banner-tag,
 	.message-tag { font-size: 2em; }
+	.m-gallery.gigs .m-gallery-quote { text-align: left; }
+	.m-gallery.companies .m-gallery-quote { text-align: right; }
 
 	.banner,
 	.footer,
@@ -198,6 +209,7 @@ body, html { background-color: #eee !important; }
 		padding: 0 .5em;
 	}
 	.m-gallery-list-item {
+		height: 19em;
 		padding: 1em .5em;
 	}
 	.m-gallery-link {
@@ -209,10 +221,6 @@ body, html { background-color: #eee !important; }
 		width: 2em; height: 2em;
 	}
 	.m-gallery-link:after { display: none; }
-	.m-gallery-quote-q {
-		max-height: 40%;
-		padding: 0 1em;
-	}
 }
 @media screen and (min-width: 50em) {
 	body { font-size: 16px; }
@@ -251,6 +259,7 @@ body, html { background-color: #eee !important; }
 		padding: 0 1em;
 	}
 	.m-gallery-list-item {
+		height: 25em;
 		padding: 2em 1em;
 	}
 	.m-gallery-link {
@@ -260,11 +269,9 @@ body, html { background-color: #eee !important; }
 	.m-gallery-link:before,
 	.m-gallery-link:after {
 		width: 3em; height: 3em;
-	}
-	.m-gallery-quote-q {
-		width: 50%;
-		padding: 1em;
-	}
+	}	
+
+	.m-gallery-quote-q { width: 50%; }
 }
 /*** MEDIA QUERIES ***/
 
