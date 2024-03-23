@@ -135,6 +135,9 @@ body, html { background-color: #eee !important; }
 	.m-gallery-list-item { flex: 1; }
 	.m-gallery-list-item.is-quote { flex: 2; }
 
+	/*** .banner ***/
+	.banner-footer { margin: 1.9em 0; }
+
 	/*** .nav ***/
 	.nav-aside {
 		padding: 0 .5em;
@@ -224,6 +227,7 @@ body, html { background-color: #eee !important; }
 	.banner-wrap,
 	.nav-wrap { display: flex; }
 	.banner-aside { flex-direction: column; }
+	.banner-wrap { align-items: center; }
 	.banner-tag { flex: 2; }
 	.banner-aside,
 	.banner-text,
