@@ -1,1 +1,12 @@
-#Hello
+collections:
+  community:
+    output: true
+    permalink: /community/:path/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "community"
+    values:
+      layout: "community"
