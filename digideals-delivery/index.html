@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delivery Area Checker</title>
+    <title>DigiDeals Delivery</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 	<style>
     body {
@@ -69,12 +69,18 @@
             width: 100%;
         }
     }
+	
+	input[type="text"] {
+		min-width: 19px !important; max-width: 100% !important; width: 90% !important;
+		display: block !important;
+		margin-left: auto !important; margin-right: auto !important;
+	}
 </style>
 </head>
 <body>
-    <h1>Is your location eligible for 24hrs delivery? Are you near a DigiDeals partner?</h1>
+    <h1>24HRs DELIVERY SERVICE CHECK: Is your neighborhood eligible for Prime courier?</h1>
     <input type="text" id="address" placeholder="Enter your address">
-    <button id="checkDelivery">24hrs Delivery Service Check</button>
+    <button id="checkDelivery">Verify for Prime</button>
     <p id="result"></p>
     <div id="map"></div>
 
@@ -127,15 +133,15 @@
 						
 						// Display results
 						if (results.some(result => result.includes("Within"))) {
-							resultElement.innerText = "Yes, you are within the radius of a DigiDeals partner. The 24hrs delivery service is available here.";
+							resultElement.innerText = "Yes, your address is eligible for Prime courier with DigiDeals.";
 						} else {
-							resultElement.innerText = "No, you are too far from the nearest DigiDeals partner. The 24hrs delivery service is not available here. Kindly await the normal timings.";
+							resultElement.innerText = "No, you are not eligible for Prime courier with DigiDeals. Your address is not near a DigiDeals warehouse.";
 						}
 
                         L.marker(addressCoords).addTo(map).bindPopup(address).openPopup();
                         map.setView(addressCoords, 13); // Center the map on the address
                     } else {
-                        resultElement.innerText = "Address not found.";
+                        resultElement.innerText = "Address not found. Double-check or be more specific. Add the city, for example.";
                     }
                 })
                 .catch(error => {
