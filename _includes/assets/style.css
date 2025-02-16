@@ -284,6 +284,9 @@ body, html { background-color: #eee !important; }
 		max-width: 75em;
 		margin: 0 auto;
 	}
+	
+	/*** .d-underline ***/
+	.d-underline { text-decoration: underline; }
 /*** END DECORATION ***/
 
 /*** ANIMATIONS ***/
