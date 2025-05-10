@@ -5,9 +5,9 @@ main { min-height: 100%; }
 
 /*** COLORS ***/
 .header { background-color: black; }
-.header-contact-a:nth-child(1) { color: black !important; }
+.header-contact-a.is-partnership { color: black !important; }
 
-.header-contact-a:nth-child(1) { background-color: white; }
+.header-contact-a.is-partnership { background-color: white !important; }
 .header,
 .header a { color: white; }
 .header-contact-a,
@@ -140,3 +140,16 @@ main { text-align: center; }
 		margin: 0 auto;
 	}
 /*** END DECORATION ***/
+
+/*** SANDBOX ***/
+.header-contact {
+	position: relative;
+}
+.header-contact-marquee {
+	position: absolute; top: -1em; right: 75%;
+	width: 25%;
+	padding: .5em;
+	background-color: #AAA;
+	color: black;
+}
+/*** END SANDBOX ***/
