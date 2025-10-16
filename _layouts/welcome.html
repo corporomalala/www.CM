@@ -8,7 +8,7 @@ layout: default
 				<h2 class="nav-title u-title"><a href="https://corporomalala.online">Corporo <br />Malala</a></h2>
 
 				<div class="nav-aside d-cssCentered">
-					<a href="mailto:hello@corporomalala.online">hello@corporomalala.online</a>
+					<a href="mailto:hello@corporomalala.com">[off: hello@corporomalala.com]</a>
 				</div>
 				
 				<div class="nav-menu">
@@ -54,7 +54,7 @@ layout: default
 				</div>
 			</div></section>
 
-			<section class="companies m-gallery"><ul class="companies-list m-gallery-list">{% for file in site.data.onlinepanies %}{% for data in file %}{% if data[0] != "QUOTE" %}
+			<section class="companies m-gallery"><ul class="companies-list m-gallery-list">{% for file in site.data.companies %}{% for data in file %}{% if data[0] != "QUOTE" %}
 				<li class="companies-list-item m-gallery-list-item">
 					<a href="{{ data[1] }}" class="companies-link m-gallery-link" title="Visit Website">{{ data[0] }}</a>
 					<img src="/assets/images/companies-{{ data[0] | downcase | replace: ' ', '' }}.png" class="companies-placeholder m-gallery-placeholder" />
