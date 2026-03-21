@@ -28,7 +28,7 @@ body, html { background-color: #eee !important; }
 .m-gallery-link,
 .m-gallery-quote { background-color: black; }
 
-.m-gallery-placeholder { filter: grayscale(100%); }
+.m-gallery-placeholder {// filter: grayscale(100%); }
 .m-gallery-link:hover ~ .m-gallery-placeholder,
 .m-gallery-link:active ~ .m-gallery-placeholder,
 .m-gallery-link:focus ~ .m-gallery-placeholder,
